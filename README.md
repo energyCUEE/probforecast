@@ -1,6 +1,6 @@
 # Probabilistic Solar Power Forecasting Using Multi-Objective Quantile Regression
 
-This repository contains a description of our works submitted to the PMAPS2024 conference. We proposed three formulations of probabilistic forecast based on quantile regression providing a prediction interval.
+This repository contains a description of our works submitted to the PMAPS2024 conference. We proposed three formulations of probabilistic forecast based on quantile regression providing a prediction interval. The proposed formulation can be described as
 
 **Formulation P1 (control average width)**
 ```math
