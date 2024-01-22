@@ -1,7 +1,8 @@
 # Probabilistic Solar Power Forecasting Using Multi-Objective Quantile Regression
 
+This repository contains a description of our works submitted to the PMAPS2024 conference. We proposed three formulations of probabilistic forecast based on quantile regression providing a prediction interval.
 
-** Formulation P1 (control average width) **
+**Formulation P1 (control average width)**
 ```math
 \begin{array}{ll}
 \underset{\underline{\beta},\overline{\beta}}{ \mbox{minimize} }
@@ -10,7 +11,7 @@
       &  \frac{1}{N}\sum_{i \in \mathcal{I}} [ \hat{u}_{i}(\overline{\beta})-\hat{l}_{i}(\underline{\beta}) ]  \leq \gamma \cdot \text{sample width},
 \end{array}
 ```
-** Formulation P2 (control large widths) **
+**Formulation P2 (control large widths)**
 ```math
 \begin{array}{ll}
 \underset{\underline{\beta},\overline{\beta}}{ \mbox{minimize} }
@@ -19,7 +20,7 @@
       & \frac{1}{K}\sum_{i=1}^K w_{[i]}  \leq \gamma \cdot \text{sample width},
 \end{array}
 ```
-** Formulation P3 (control maximum width) **
+**Formulation P3 (control maximum width)**
 ```math
 \begin{array}{ll}
 \underset{\underline{\beta},\overline{\beta}}{ \mbox{minimize} }
@@ -30,9 +31,9 @@
 ```
 
 This repository consists of the following folders.
-- **codes** consists of codes of an experiment for the simulated dataset and solar dataset. 
+- **codes** consist of an experiment for the simulated and solar datasets. 
   - **Formulation** consists of .py file for P1 and P3 formulation which reformulated as linear programming.
   are utilized for downloading data, cleaning it, and generating datasets.
-- **data** contains solar data and simulated data, which are used in the experiment training and testing process.
-- **figures** contains all figures and a python notebook file, visualization.ipynb, used to generate all figures in the conference paper.
-- **results** store all the CSV, pkl, npy files using in this project
+- **data** contains solar and simulated data used in the experiment training and testing process.
+- **figures** contains all figures and a Python notebook file for visualization.ipynb generates all figures in the conference paper.
+- **results** store all the CSV, pkl, npy files used in this project
