@@ -1,6 +1,8 @@
 # Probabilistic Solar Power Forecasting Using Multi-Objective Quantile Regression
-This repository is composed of the following folders
-- **codes** are utilized for downloading data, cleaning it, and generating datasets.
-- **data** contains training code for the Cloud Attenuation model. There are three groups in total: Regression, Tree-based, and CNNs models.
-- **figures** is used for data and results visualization.
-- **results** store the CSV files used in this project.
+This repository consists of the following folders.
+- **codes** consists of codes of an experiment for the simulated dataset and solar dataset. 
+  - **Formulation** consists of .py file for P1 and P3 formulation which reformulated as linear programming.
+  are utilized for downloading data, cleaning it, and generating datasets.
+- **data** contains solar data and simulated data, which are used in the experiment training and testing process.
+- **figures** contains all figures and a python notebook file, visualization.ipynb, used to generate all figures in the conference paper.
+- **results** store all the CSV, pkl, npy files using in this project
