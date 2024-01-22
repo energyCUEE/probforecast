@@ -1,7 +1,7 @@
 # Probabilistic Solar Power Forecasting Using Multi-Objective Quantile Regression
 
 
-## Formulation P1 (control average width)
+** Formulation P1 (control average width) **
 ```math
 \begin{array}{ll}
 \underset{\underline{\beta},\overline{\beta}}{ \mbox{minimize} }
@@ -10,7 +10,7 @@
       &  \frac{1}{N}\sum_{i \in \mathcal{I}} [ \hat{u}_{i}(\overline{\beta})-\hat{l}_{i}(\underline{\beta}) ]  \leq \gamma \cdot \text{sample width},
 \end{array}
 ```
-## Formulation P2 (control large widths)
+** Formulation P2 (control large widths) **
 ```math
 \begin{array}{ll}
 \underset{\underline{\beta},\overline{\beta}}{ \mbox{minimize} }
@@ -19,7 +19,7 @@
       & \frac{1}{K}\sum_{i=1}^K w_{[i]}  \leq \gamma \cdot \text{sample width},
 \end{array}
 ```
-## Formulation P3 (control maximum width)
+** Formulation P3 (control maximum width) **
 ```math
 \begin{array}{ll}
 \underset{\underline{\beta},\overline{\beta}}{ \mbox{minimize} }
