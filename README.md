@@ -1,4 +1,18 @@
 # Probabilistic Solar Power Forecasting Using Multi-Objective Quantile Regression
+# Formulation P1 (control average width)
+\begin{equation}
+\begin{array}{ll}
+\underset{\underline{\beta},\overline{\beta}}{ \mbox{minimize} }
+		& \sum_{i \in \mathcal{I}} [ \rho_{\underline{\alpha}}(y_{i}-\hat{l}_{i}(\underline{\beta}))+\rho_{\overline{\alpha}}(y_{i}-\hat{u}_{i}(\overline{\beta})) ] \\
+		\text{subject to} & 0 \leq \hat{l}_{i}(\underline{\beta}) \leq \hat{u}_{i}(\overline{\beta}), \forall i \in \mathcal{I},\\
+      &  \frac{1}{N}\sum_{i \in \mathcal{I}} [ \hat{u}_{i}(\overline{\beta})-\hat{l}_{i}(\underline{\beta}) ]  \leq \gamma \cdot \text{sample width},
+\end{array}
+\end{equation}
+
+
+
+
+
 This repository consists of the following folders.
 - **codes** consists of codes of an experiment for the simulated dataset and solar dataset. 
   - **Formulation** consists of .py file for P1 and P3 formulation which reformulated as linear programming.
