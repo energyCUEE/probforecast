@@ -1,6 +1,7 @@
 # Probabilistic Solar Power Forecasting Using Multi-Objective Quantile Regression
-# Formulation P1 (control average width)
 
+
+## Formulation P1 (control average width)
 ```math
 \begin{array}{ll}
 \underset{\underline{\beta},\overline{\beta}}{ \mbox{minimize} }
@@ -9,10 +10,24 @@
       &  \frac{1}{N}\sum_{i \in \mathcal{I}} [ \hat{u}_{i}(\overline{\beta})-\hat{l}_{i}(\underline{\beta}) ]  \leq \gamma \cdot \text{sample width},
 \end{array}
 ```
-
-
-
-
+## Formulation P2 (control large widths)
+```math
+\begin{array}{ll}
+\underset{\underline{\beta},\overline{\beta}}{ \mbox{minimize} }
+		& \sum_{i \in \mathcal{I}} [ \rho_{\underline{\alpha}}(y_{i}-\hat{l}_{i}(\underline{\beta}))+\rho_{\overline{\alpha}}(y_{i}-\hat{u}_{i}(\overline{\beta})) ] \\
+		\text{subject to} & 0 \leq \hat{l}_{i}(\underline{\beta}) \leq \hat{u}_{i}(\overline{\beta}), \forall i \in \mathcal{I},\\
+      & \frac{1}{K}\sum_{i=1}^K w_{[i]}  \leq \gamma \cdot \text{sample width},
+\end{array}
+```
+## Formulation P3 (control maximum width)
+```math
+\begin{array}{ll}
+\underset{\underline{\beta},\overline{\beta}}{ \mbox{minimize} }
+		& \sum_{i \in \mathcal{I}} [ \rho_{\underline{\alpha}}(y_{i}-\hat{l}_{i}(\underline{\beta}))+\rho_{\overline{\alpha}}(y_{i}-\hat{u}_{i}(\overline{\beta})) ] \\
+		\text{subject to} & 0 \leq \hat{l}_{i}(\underline{\beta}) \leq \hat{u}_{i}(\overline{\beta}), \forall i \in \mathcal{I},\\
+      &  \underset{i \in \mathcal{I} }{ \max } [ \hat{u}_{i}(\overline{\beta})-\hat{l}_{i}(\underline{\beta}) ] \leq \gamma \cdot \text{sample width},
+\end{array}
+```
 
 This repository consists of the following folders.
 - **codes** consists of codes of an experiment for the simulated dataset and solar dataset. 
