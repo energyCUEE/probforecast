@@ -37,3 +37,17 @@ This repository consists of the following folders.
 - **data** contains solar and simulated data used in the experiment training and testing process.
 - **figures** contains all figures and a Python notebook file for visualization.ipynb generates all figures in the conference paper.
 - **results** store all the CSV, pkl, npy files used in this project
+
+## Citation
+```
+@INPROCEEDINGS{10667174,
+  author={Amnuaypongsa, Worachit and Wangdee, Wijarn and Songsiri, Jitkomut},
+  booktitle={2024 18th International Conference on Probabilistic Methods Applied to Power Systems (PMAPS)}, 
+  title={Probabilistic Solar Power Forecasting Using Multi-Objective Quantile Regression}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-6},
+  keywords={Solar irradiance;Renewable energy sources;Uncertainty;Costs;Upper bound;Predictive models;Probabilistic logic;probabilistic forecasting;solar irradiance;quantile regression;prediction interval},
+  doi={10.1109/PMAPS61648.2024.10667174}}
+```
